@@ -1,0 +1,10 @@
+.venv
+.git
+.idea
+__pycache__
+.pytest_cache
+.mypy_cache
+var/vector_db
+var/log
+var/generated_docs
+var/generated_answers

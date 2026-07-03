@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checking
+.mypy_cache/
+
+# Ruff
+.ruff_cache/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+var/log/
+
+# Vector database
+var/vector_db/
+
+# Generated outputs
+var/generated_docs/
+var/generated_answers/
+
+# Uploaded archives
+var/input_data/
+var/extracted_archives/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+docker-data/
+
+# Streamlit
+.streamlit/
+
+# Local configs
+*.local.yml
+*.local.yaml
+
+# Temporary files
+*.tmp
+*.temp
+*.bak

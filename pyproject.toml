@@ -1,0 +1,102 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codescope-ai"
+version = "0.1.0"
+description = "AI-powered code documentation assistant with Retrieval-Augmented Generation (RAG)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Valentin Sheboldaev" }
+]
+
+keywords = [
+    "ai",
+    "rag",
+    "llm",
+    "code-analysis",
+    "documentation",
+    "vector-search",
+    "streamlit",
+    "openai",
+    "chromadb",
+    "observability"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+    "streamlit>=1.36.0",
+    "openai>=1.35.0",
+    "chromadb>=0.5.3",
+    "python-dotenv>=1.0.1",
+    "pyyaml>=6.0.1",
+    "tiktoken>=0.7.0",
+    "tenacity>=8.4.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.2.2",
+    "pytest-cov>=5.0.0",
+    "black>=24.4.2",
+    "ruff>=0.5.0",
+    "mypy>=1.10.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/w-e-ll/codescope-ai"
+Repository = "https://github.com/w-e-ll/codescope-ai"
+Documentation = "https://github.com/w-e-ll/codescope-ai/blob/main/README.md"
+
+[project.scripts]
+codescope-ai = "codescope_ai.main:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["codescope_ai*"]
+
+[tool.black]
+line-length = 79
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 79
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+    "I",
+    "B"
+]
+
+ignore = [
+    "E501"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+ignore_missing_imports = true
+strict = false

@@ -1,0 +1,23 @@
+include README.md
+include CHANGELOG.md
+include DECISIONS.md
+include LICENSE
+include requirements.txt
+include pyproject.toml
+include Makefile
+include Dockerfile
+include docker-compose.yml
+include .env.example
+
+recursive-include etc *.yml
+recursive-include codescope_ai *.py
+recursive-include tests *.py
+
+recursive-include var/input_data *
+recursive-include var/generated_docs *
+recursive-include var/generated_answers *
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store

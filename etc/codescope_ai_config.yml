@@ -1,0 +1,53 @@
+env: local
+
+paths:
+  base_dir: "."
+  input_data_dir: "${base_dir}/var/input_data"
+  extracted_archives_dir: "${base_dir}/var/extracted_archives"
+  vector_db_dir: "${base_dir}/var/vector_db"
+  embeddings_dir: "${base_dir}/var/embeddings"
+  generated_docs_dir: "${base_dir}/var/generated_docs"
+  generated_answers_dir: "${base_dir}/var/generated_answers"
+  log_dir: "${base_dir}/var/logs"
+
+ai:
+  embedding_model: "text-embedding-3-small"
+  llm_model: "gpt-4o-mini"
+  chunk_size: 120
+  chunk_overlap: 20
+  retrieval_top_k: 5
+  max_context_chars: 16000
+
+vector_db:
+  collection_name: "codescope_ai_chunks"
+
+limits:
+  max_archive_size_mb: 50
+  max_file_size_mb: 2
+  request_timeout_seconds: 60
+  embedding_timeout_seconds: 60
+
+ingestion:
+  supported_extensions:
+    - ".py"
+    - ".md"
+    - ".txt"
+    - ".yml"
+    - ".yaml"
+    - ".toml"
+    - ".json"
+    - ".sql"
+    - ".ini"
+    - ".cfg"
+
+  ignored_directories:
+    - ".git"
+    - ".venv"
+    - "venv"
+    - "__pycache__"
+    - "node_modules"
+    - "dist"
+    - "build"
+    - ".idea"
+    - ".pytest_cache"
+    - ".mypy_cache"

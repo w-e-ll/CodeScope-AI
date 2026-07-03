@@ -1,0 +1,81 @@
+APP_NAME=codescope-ai
+PYTHON=python3
+VENV=.venv
+PIP=$(VENV)/bin/pip
+PYTEST=$(VENV)/bin/pytest
+STREAMLIT=$(VENV)/bin/streamlit
+
+ifeq ($(OS),Windows_NT)
+	PYTHON=python
+	VENV_BIN=$(VENV)/Scripts
+	PIP=$(VENV_BIN)/pip
+	PYTEST=$(VENV_BIN)/pytest
+	STREAMLIT=$(VENV_BIN)/streamlit
+endif
+
+.DEFAULT_GOAL := help
+
+help:
+	@echo ""
+	@echo "CodeScope AI Commands"
+	@echo ""
+	@echo "make venv              Create virtual environment"
+	@echo "make install           Install dependencies"
+	@echo "make run               Run Streamlit application"
+	@echo "make test              Run tests"
+	@echo "make lint              Run lint checks"
+	@echo "make format            Format source code"
+	@echo "make clean             Remove temporary files"
+	@echo "make docker-build      Build Docker image"
+	@echo "make docker-run        Run Docker container"
+	@echo "make docker-compose    Run docker-compose stack"
+	@echo "make logs              Tail application logs"
+	@echo ""
+
+venv:
+	$(PYTHON) -m venv $(VENV)
+
+install:
+	$(PIP) install --upgrade pip
+	$(PIP) install -r requirements.txt
+
+run:
+	$(STREAMLIT) run codescope_ai/app/ui/streamlit_app.py
+
+test:
+	$(PYTEST) tests -v
+
+lint:
+	ruff check .
+
+format:
+	black .
+
+clean:
+	rm -rf .pytest_cache
+	rm -rf .mypy_cache
+	rm -rf __pycache__
+	find . -type d -name "__pycache__" -exec rm -rf {} +
+
+docker-build:
+	docker build -t $(APP_NAME) .
+
+docker-run:
+	docker run \
+	-p 8501:8501 \
+	--env-file .env \
+	-v $(PWD)/var:/app/var \
+	-v $(PWD)/etc:/app/etc \
+	$(APP_NAME)
+
+docker-compose:
+	docker-compose up --build
+
+docker-compose-detached:
+	docker-compose up -d --build
+
+docker-stop:
+	docker-compose down
+
+logs:
+	tail -f var/log/codescope_ai.log
