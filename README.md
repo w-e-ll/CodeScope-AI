@@ -23,33 +23,33 @@ AI-powered engineering intelligence platform for semantic repository analysis, g
 
 ---
 
-## 🚀 Demo
+# 🚀 Demo
 
-### Upload & Repository Indexing
+## Upload & Repository Indexing
 
 ![Upload](docs/images/upload_index.png)
 
 ---
 
-### AI Codebase Chat
+## AI Codebase Chat
 
 ![Chat](docs/images/chat_codebase.png)
 
 ---
 
-### AI Documentation Generation
+## AI Documentation Generation
 
 ![Docs](docs/images/generated_docs.png)
 
 ---
 
-### Retrieval Debugging & Explainability
+## Retrieval Debugging & Explainability
 
 ![Debug](docs/images/retrieval_debug.png)
 
 ---
 
-### ✨ Core Features
+## ✨ Core Features
 
 - Semantic repository indexing
 - AST-aware Python code chunking
@@ -64,13 +64,13 @@ AI-powered engineering intelligence platform for semantic repository analysis, g
 
 ---
 
-### 🧭 High-Level Architecture
+## 🧭 High-Level Architecture
 
 ![Architecture](docs/images/architecture.png)
 
 ---
 
-### 📂 Project Structure
+## 📂 Project Structure
 
 ```text
 CodeScope-AI/
@@ -126,8 +126,6 @@ CodeScope-AI/
 ├── DECISIONS.md
 └── .env.example
 ```
-
----
 
 ---
 
@@ -194,37 +192,37 @@ can be combined into a more transparent and trustworthy developer platform.
 
 ---
 
-## ⚡ Quick Start
+# ⚡ Quick Start
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/w-e-ll/CodeScope-AI.git
 cd CodeScope-AI
 ```
 
-## Create Virtual Environment
+# Create Virtual Environment
 
-### Linux/macOS
+## Linux/macOS
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 
-### Windows
+## Windows
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\activate
 ```
-### Install Dependencies
+## Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Configure Environment
+## Configure Environment
 
 ```bash
 cp .env.example .env
@@ -234,7 +232,7 @@ cp .env.example .env
 OPENAI_API_KEY=your_api_key
 ```
 
-### Run Application
+## Run Application
 
 ```bash
 streamlit run codescope_ai/app/ui/streamlit_app.py
@@ -242,7 +240,7 @@ streamlit run codescope_ai/app/ui/streamlit_app.py
 
 ---
 
-## 📚 Overview
+# 📚 Overview
 
 CodeScope AI analyzes software repositories and allows engineers to:
 
@@ -266,7 +264,7 @@ The project focuses heavily on:
 
 ---
 
-### 🧠 Why This Project Exists
+## 🧠 Why This Project Exists
 
 Modern repositories grow faster than engineers can understand them.
 
@@ -285,7 +283,7 @@ the platform focuses on:
 
 ---
 
-### 🧠 Semantic Code Understanding
+## 🧠 Semantic Code Understanding
 
 The system understands:
 
@@ -301,7 +299,7 @@ The system understands:
 
 ---
 
-### 🔎 AI Codebase Chat
+## 🔎 AI Codebase Chat
 
 Example questions:
 
@@ -317,7 +315,7 @@ How is exception handling implemented?
 
 ---
 
-### 📄 AI Documentation Generation
+## 📄 AI Documentation Generation
 
 Generate:
 
@@ -329,7 +327,7 @@ Generate:
 
 ---
 
-### 🧩 Retrieval Debug Visibility
+## 🧩 Retrieval Debug Visibility
 
 The UI exposes:
 
@@ -348,7 +346,7 @@ This greatly improves:
 
 ---
 
-### 🧠 Supported File Types
+## 🧠 Supported File Types
 
 The platform currently supports:
 
@@ -371,7 +369,7 @@ README.md
 
 ---
 
-### 🔎 Example Questions
+## 🔎 Example Questions
 
 ```text
 Where is logging configured?
@@ -391,7 +389,7 @@ Which files handle exceptions?
 
 ---
 
-### 📈 Future Improvements
+## 📈 Future Improvements
 
 - Hybrid retrieval (BM25 + vectors)
 - Reranking models
@@ -406,7 +404,7 @@ Which files handle exceptions?
 
 ---
 
-### 🔐 Security Considerations
+## 🔐 Security Considerations
 
 Future production improvements:
 
@@ -420,7 +418,7 @@ Future production improvements:
 
 ---
 
-### 🧪 Testing
+## 🧪 Testing
 
 The project includes pytest-based coverage for:
 
@@ -434,7 +432,7 @@ The project includes pytest-based coverage for:
 - prompt generation
 - answer generation.
 
-Run tests:
+### Run tests:
 
 ```bash
 pytest tests -v
