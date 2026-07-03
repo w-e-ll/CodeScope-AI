@@ -379,26 +379,6 @@ README.md
 
 ---
 
-## 🔎 Example Questions
-
-```text
-Where is logging configured?
-
-How does retry logic work?
-
-Which files implement vector retrieval?
-
-How are embeddings generated?
-
-What would be required to productionize this application?
-
-How does the ingestion pipeline work?
-
-Which files handle exceptions?
-```
-
----
-
 ## 📈 Future Improvements
 
 - Hybrid retrieval (BM25 + vectors)
