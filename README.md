@@ -32,7 +32,7 @@ AI-powered engineering intelligence platform for semantic repository analysis, g
 </p>
 
 <p align="center">
-Click the image above to watch the full demo walkthrough: https://youtu.be/IWuHDsu0smI
+Click link to watch the full demo walkthrough: https://youtu.be/IWuHDsu0smI
 </p>
 
 ## Upload & Repository Indexing
