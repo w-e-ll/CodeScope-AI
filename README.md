@@ -23,7 +23,17 @@ AI-powered engineering intelligence platform for semantic repository analysis, g
 
 ---
 
-# 🚀 Demo
+## 🎬 Demo Video
+
+<p align="center">
+  <a href="https://youtu.be/IWuHDsu0smI">
+    <img src="docs/images/enter.png" width="900">
+  </a>
+</p>
+
+<p align="center">
+Click the image above to watch the full demo walkthrough: https://youtu.be/IWuHDsu0smI
+</p>
 
 ## Upload & Repository Indexing
 
