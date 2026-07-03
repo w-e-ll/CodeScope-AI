@@ -64,6 +64,73 @@ AI-powered engineering intelligence platform for semantic repository analysis, g
 
 ---
 
+### 🧭 High-Level Architecture
+
+![Architecture](docs/images/architecture.png)
+
+---
+
+### 📂 Project Structure
+
+```text
+CodeScope-AI/
+│
+├── codescope_ai/
+│   ├── app/
+│   │   ├── core/
+│   │   │   ├── app_config.py
+│   │   │   ├── exceptions.py
+│   │   │   ├── retry.py
+│   │   │   └── setup_logger.py
+│   │   │
+│   │   ├── ingestion/
+│   │   │   ├── archive_loader.py
+│   │   │   ├── file_discovery.py
+│   │   │   ├── source_file_reader.py
+│   │   │   └── code_chunker.py
+│   │   │
+│   │   ├── rag/
+│   │   │   ├── embedding_client.py
+│   │   │   ├── vector_store.py
+│   │   │   ├── retriever.py
+│   │   │   ├── prompt_builder.py
+│   │   │   ├── llm_client.py
+│   │   │   └── answer_service.py
+│   │   │
+│   │   ├── documentation/
+│   │   │   ├── file_documenter.py
+│   │   │   └── project_documenter.py
+│   │   │
+│   │   └── ui/
+│   │       └── streamlit_app.py
+│   │
+│   └── main.py
+│
+├── etc/
+│   └── codescope_ai_config.yml
+│
+├── var/
+│   ├── input_data/
+│   ├── extracted_archives/
+│   ├── vector_db/
+│   ├── generated_docs/
+│   ├── generated_answers/
+│   └── log/
+│
+├── tests/
+├── Dockerfile
+├── requirements.txt
+├── pyproject.toml
+├── Makefile
+├── README.md
+├── DECISIONS.md
+└── .env.example
+```
+
+---
+
+---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -215,71 +282,6 @@ the platform focuses on:
 - retrieval explainability
 - operational observability
 - grounded technical answers.
-
----
-
-### 🧭 High-Level Architecture
-
-![Architecture](docs/images/architecture.png)
-
----
-
-### 📂 Project Structure
-
-```text
-CodeScope-AI/
-│
-├── codescope_ai/
-│   ├── app/
-│   │   ├── core/
-│   │   │   ├── app_config.py
-│   │   │   ├── exceptions.py
-│   │   │   ├── retry.py
-│   │   │   └── setup_logger.py
-│   │   │
-│   │   ├── ingestion/
-│   │   │   ├── archive_loader.py
-│   │   │   ├── file_discovery.py
-│   │   │   ├── source_file_reader.py
-│   │   │   └── code_chunker.py
-│   │   │
-│   │   ├── rag/
-│   │   │   ├── embedding_client.py
-│   │   │   ├── vector_store.py
-│   │   │   ├── retriever.py
-│   │   │   ├── prompt_builder.py
-│   │   │   ├── llm_client.py
-│   │   │   └── answer_service.py
-│   │   │
-│   │   ├── documentation/
-│   │   │   ├── file_documenter.py
-│   │   │   └── project_documenter.py
-│   │   │
-│   │   └── ui/
-│   │       └── streamlit_app.py
-│   │
-│   └── main.py
-│
-├── etc/
-│   └── codescope_ai_config.yml
-│
-├── var/
-│   ├── input_data/
-│   ├── extracted_archives/
-│   ├── vector_db/
-│   ├── generated_docs/
-│   ├── generated_answers/
-│   └── log/
-│
-├── tests/
-├── Dockerfile
-├── requirements.txt
-├── pyproject.toml
-├── Makefile
-├── README.md
-├── DECISIONS.md
-└── .env.example
-```
 
 ---
 
